@@ -11,10 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS de Splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+
     <!-- Incluir jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Incluir JS de Owl Carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- JS de Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+
+    
 </head>
 <body>
     <!-- NAVEGACION -->
@@ -96,7 +104,6 @@
 
      </div>
 
-
      <!-- ENLACES DE CIRCULOS VERDES -->
      <section class="botones" style="padding-top: 8rem;">
         <div class="bributton-container">
@@ -164,13 +171,20 @@
         <img src="img_NOTICIAS/noticia01.jpg" alt="" class="img-noticia-principal">
         <div class="contenido-noticia">
             <h2 class="ultima-noticia">Ultimo Momento</h2>
-            <h1 class="titulo-noticia-principal">RUTA AGRARIA: 1,700 KM DE VÍAS RENOVADAS</h1>
+            <h1 class="titulo-noticia-principal">MESA TÉCNICA PARA NOMBRAMIENTO DE DOCENTES</h1>
             <p class="contenido-noticia-principal">
-                La Ruta Agraria ha transformado la conectividad en todo el <br> 
-                departamento de Junín, con 1,700 kilómetros de vías mejoradas <br>
-                gracias al despliegue de más de 100 maquinarias pesadas. Este <br>
-                esfuerzo ha beneficiado a 60 distritos, mejorando la calidad de <br>
-                vida de 300,000 familias y dinamizando la economía regional.
+                Este lunes 20 se tendrá primeras coordinaciones para lograr derechos laborales de educadores 
+                En respuesta a las demandas de docentes que solicitan su nombramiento, el Gobierno Regional Junín (GRJ) 
+                anunció la conformación de una mesa técnica que iniciará su labor este lunes 20 de enero, buscando dar 
+                solución a sus inquietudes laborales. Esta decisión fue el resultado de un diálogo entre los 
+                representantes de los profesores con mejor desempeño en la última evaluación y el equipo técnico
+                 del GRJ. La reunión, que contará con la participación de la Gerencia de Desarrollo Social, 
+                 la Drej, las Ugels y la directiva de los docentes, se centrará en transparentar las plazas 
+                 vacantes disponibles. "Todo será realizado bajo un enfoque técnico y transparente", aseguró 
+                 uno de los docentes participantes. De esta manera en forma conjunta se reafirma el compromiso 
+                 con la meritocracia y el fortalecimiento del sistema educativo regional.
+
+
             </p>
         </div>
     </div>
@@ -179,6 +193,22 @@
             <a href="https://www.regionjunin.gob.pe/lista_noticias/">TODAS LAS NOTICIAS</a>
         </div>
 
+        <div class="carousel-container">
+            <button id="prevBtn">⬅</button>
+            <div class="carousel">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_NOTICIAS/3.jpeg" alt="">
+            <h2>LUCHA CONTRA EL DENGUE: PREVENCIÓN EN SELVA CENTRAL</h2>
+            <p>Con el lema “Hechos y no palabras”, los pobladores y representantes de las comunidades 
+                campesinas de la provincia de Tarma y zonas altoandinas expresaron su agradecimiento 
+                por la entrega de títulos de propiedad. Esta iniciativa, promovida por el gobernador 
+                Zósimo Cárdenas, impulsa la inversión en mejoras agrícolas, facilita el acceso a créditos 
+                y fortalece la cohesión local.</p>
+        </div>
         <div class="card">
             <img src="img_NOTICIAS/1.jpeg" alt="">
             <h2>ALUMNOS DE TARMA CON MODERNO PLAN DE CONTIGENCIA</h2>
@@ -205,8 +235,34 @@
                 Zósimo Cárdenas, impulsa la inversión en mejoras agrícolas, facilita el acceso a créditos 
                 y fortalece la cohesión local.</p>
         </div>
+
+
+
     </div>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+        const noticiaPrincipalImg = document.querySelector(".img-noticia-principal");
+        const noticiaPrincipalTitulo = document.querySelector(".titulo-noticia-principal");
+        const noticiaPrincipalContenido = document.querySelector(".contenido-noticia-principal");
+
+        cards.forEach(card => {
+            card.addEventListener("click", function () {
+                // Obtener datos de la tarjeta seleccionada
+                const imgSrc = card.querySelector("img").src;
+                const titulo = card.querySelector("h2").textContent;
+                const contenido = card.querySelector("p").textContent;
+
+                // Actualizar la noticia principal con la tarjeta seleccionada
+                noticiaPrincipalImg.src = imgSrc;
+                noticiaPrincipalTitulo.textContent = titulo;
+                noticiaPrincipalContenido.textContent = contenido;
+            });
+        });
+    });
+    </script>
+
     <!--TRANSMICIONES EN VIVO (SECCION)-->
     <article>
         <h1 class="transmiciones">trAnsmIcIones</h1>
@@ -220,8 +276,6 @@
         <div class="main-video">
             <iframe 
                 src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/644754994560027?locale=es_LA" 
-                width="770px" 
-                height="650px" 
                 frameborder="0" 
                 allowfullscreen="true" 
                 scrolling="no" 
