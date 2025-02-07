@@ -59,3 +59,12 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('mainMenu');
+    if (window.scrollY > 500) { // Cambia 50 por la cantidad de píxeles que desees para activar el cambio
+        header.classList.add('solid');
+    } else {
+        header.classList.remove('solid');
+    }
+});

@@ -14,12 +14,15 @@
     <!-- Incluir jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Incluir JS de Owl Carousel -->
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 <body>
     <!-- NAVEGACION -->
-     <header>
+     <header class="header" id="mainMenu">
         <div class="brilogo" style="display: flex;">
+            
             <a href="https://www.regionjunin.gob.pe/index.php" style="padding-right: 35px;">
                 <img src="images/logo.png">
             </a>
@@ -27,9 +30,21 @@
                 <img src="images/eslogan.png" style="margin-top: 10px;">
             </a>
         </div>
-        <ul class="menu">
+        <ul class="menu" >
             <li><a href="#"> INICIO </a></li>
-            <li><a href="#"> INFORMACION <br> INSTITUCIONAL </a></li>
+            <li>
+                <li><a href="#"> INFORMACION <br> INSTITUCIONAL </a></li>
+            <ul class="submenu">
+                <li><a href="#">Mision y Vision</a>
+                <li><a href="#">Estructura Orgánica</a> 
+                <li><a href="#">Gobernador Regional</a>
+                <li><a href="#">Consejo Regional</a>
+                <li><a href="#">Consejo de Coordinacion Regional</a>
+                <li><a href="#">Actividades Oficiales</a>
+
+            </ul>
+            </li>
+            
             <li><a href="#"> GERENCIAS <br> Y  OFICINAS </a></li>
             <li><a href="#"> DOCUMENTOS DE <br> TRANSPARENCIA </a></li>
             <li><a href="#"> SERVICIOS<br> EN  LINEA </a></li>
@@ -98,7 +113,7 @@
 
 
      <!-- ENLACES DE CIRCULOS VERDES -->
-     <section class="botones" style="padding-top: 8rem;">
+     <section class="botones" style="padding-top: 5rem;">
         <div class="bributton-container">
             <a href="http://sisdore.regionjunin.gob.pe:8080/sisdore/pages/Inicio.jsf" class="circle-button"><i class="fa-solid fa-folder-open"></i></a>
             <P>SISTEMA<br>DOCUMENTARIO<br>REGIONAL</P>
@@ -124,6 +139,7 @@
             <p>OBRAS EN<br>PROGRESO</p>
         </div>
     </section>
+    
 
     <!-- BOLETINES INFORMATIVOS (FRANJA) -->
     <article>
@@ -370,7 +386,7 @@
 
         <footer>
             <div>
-                <img src="./imagenes/orditi_logo.png" alt="ORDITI" width="250px">
+                <img src="./images/orditi_logo.png" alt="ORDITI" width="250px">
                 <ul>
                     <li>Gobierno Regional Junín Copyright © 2024</li>
                     <li>_________________</li>
