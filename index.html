@@ -14,6 +14,8 @@
     <!-- CSS de Splide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- Incluir jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Incluir JS de Owl Carousel -->
@@ -139,8 +141,8 @@
         <hr>
     </article>
 
-    <!-- SECCION BOLETINES -->
-    <div class="bricontainer" style="margin: 5rem;">
+    
+    <div class="bricontainer">
         <div class="bricard">
             <img src="images/boletin1.jpg" alt="...">
             <a href="https://www.facebook.com/photo/?fbid=985419816956691&set=a.245305080968172" target="_blank" class="info-btn">Más Información</a>
@@ -159,8 +161,6 @@
         </div>
     </div>
     
-    
-    <!-- NOTICAS Y SUCESOS (FRANJA) -->
      <article>
         <h1 class="noticias">NOTICIAS Y SUCESOS</h1>
         <h2 class="destacados">destacados</h2>
@@ -188,16 +188,10 @@
             </p>
         </div>
     </div>
+    
     <div class="cards-container">
         <div >
             <a href="https://www.regionjunin.gob.pe/lista_noticias/">TODAS LAS NOTICIAS</a>
-        </div>
-
-        <div class="carousel-container">
-            <button id="prevBtn">⬅</button>
-            <div class="carousel">
-
-            </div>
         </div>
 
         <div class="card">
@@ -236,8 +230,6 @@
                 y fortalece la cohesión local.</p>
         </div>
 
-
-
     </div>
     
     <script>
@@ -262,8 +254,8 @@
         });
     });
     </script>
-
-    <!--TRANSMICIONES EN VIVO (SECCION)-->
+    
+    
     <article>
         <h1 class="transmiciones">trAnsmIcIones</h1>
         <h2 class="vivo">en vivo</h2>
@@ -271,8 +263,7 @@
      </article>
 
 
-    <div class="container">
- 
+     <div class="container">
         <div class="main-video">
             <iframe 
                 src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/644754994560027?locale=es_LA" 
@@ -284,57 +275,73 @@
             </iframe>
             <h4>#EnVivo | 🔵🟢🟠 LANZAMIENTO DEL PROYECTO EDUCATIVO REGIONAL Y PROYECTO YACHAY</h4>
         </div>
-
-        <div class="video-list">
-            <div class="video-item">
-                <iframe 
-                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/829860039245780?locale=es_LA" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    scrolling="no" 
-                    style="border:none;"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
-                <h4>#EnVivo | 🔵🟢🟠 #RevolucionEducativa - Gobernador Regional Inspecciona 
-                    UGEL - Río Tambo
-                    #GobiernoRegionalJunin #ZósimoCárdenas #ElCambioLoHacemosTodos
-                </h4>
+        <div class="card-wrapper swiper">
+            <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/644754994560027?locale=es_LA" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        scrolling="no" 
+                        style="border:none;"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <h4>#EnVivo | 🔵🟢🟠 LANZAMIENTO DEL PROYECTO EDUCATIVO REGIONAL Y PROYECTO YACHAY</h4>
+                </div>
+                <div class="card-item swiper-slide">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/829860039245780?locale=es_LA" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        scrolling="no" 
+                        style="border:none;"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <h4>#EnVivo | 🔵🟢🟠 #RevolucionEducativa - Gobernador Regional Inspecciona 
+                        UGEL - Río Tambo
+                        
+                    </h4>
+                </div>
+                <div class="card-item swiper-slide">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/1131532901373941?locale=es_LA" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        scrolling="no" 
+                        style="border:none;"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <h4>
+                        #EnVivo | 🔵🟢🟠 𝗜𝗻𝘀𝗽𝗲𝗰𝗰𝗶𝗼́𝗻 𝗱𝗲 𝗖𝗲𝗻𝘁𝗿𝗼 𝗱𝗲 𝗦𝗮𝗹𝘂𝗱 𝗣𝘂𝗲𝗿𝘁𝗼 𝗢𝗰𝗼𝗽𝗮 𝗥𝗶́𝗼 𝗧𝗮𝗺𝗯𝗼
+                        
+                    </h4>
+                </div>
+                <div class="card-item swiper-slide">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/1619152132812428?locale=es_LA" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        scrolling="no" 
+                        style="border:none;"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <h4>
+                        #RevoluciónEducativa | 🔵🟢🟠 𝗜𝗻𝘀𝗽𝗲𝗰𝗰𝗶𝗼́𝗻 𝗱𝗲 𝗹𝗮 𝗼𝗯𝗿𝗮 
+                        𝗜.𝗘 𝗔𝗡𝗗𝗥𝗘𝗦 𝗔𝗩𝗘𝗟𝗜𝗡𝗢 𝗖𝗔́𝗖𝗘𝗥𝗘𝗦 𝗗𝗢𝗥𝗥𝗘𝗚𝗔𝗥𝗔𝗬 - 𝗣𝗔𝗡𝗚𝗢𝗔 - 𝗦𝗔𝗧𝗜𝗣𝗢
+                        
+                    </h4>
+                </div>
             </div>
 
-            <div class="video-item">
-                <iframe 
-                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/1131532901373941?locale=es_LA" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    scrolling="no" 
-                    style="border:none;"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
-                <h4>
-                    #EnVivo | 🔵🟢🟠 𝗜𝗻𝘀𝗽𝗲𝗰𝗰𝗶𝗼́𝗻 𝗱𝗲 𝗖𝗲𝗻𝘁𝗿𝗼 𝗱𝗲 𝗦𝗮𝗹𝘂𝗱 𝗣𝘂𝗲𝗿𝘁𝗼 𝗢𝗰𝗼𝗽𝗮 𝗥𝗶́𝗼 𝗧𝗮𝗺𝗯𝗼
-                    #GobiernoRegionalJunin #ZósimoCárdenas #ElCambioLoHacemosTodos
-                </h4>
-            </div>
+            <div class="swiper-pagination"></div>
 
-            <div class="video-item">
-                <iframe 
-                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100066497738582/videos/1619152132812428?locale=es_LA" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    scrolling="no" 
-                    style="border:none;"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
-                <h4>
-                    #RevoluciónEducativa | 🔵🟢🟠 𝗜𝗻𝘀𝗽𝗲𝗰𝗰𝗶𝗼́𝗻 𝗱𝗲 𝗹𝗮 𝗼𝗯𝗿𝗮 
-                    𝗜.𝗘 𝗔𝗡𝗗𝗥𝗘𝗦 𝗔𝗩𝗘𝗟𝗜𝗡𝗢 𝗖𝗔́𝗖𝗘𝗥𝗘𝗦 𝗗𝗢𝗥𝗥𝗘𝗚𝗔𝗥𝗔𝗬 - 𝗣𝗔𝗡𝗚𝗢𝗔 - 𝗦𝗔𝗧𝗜𝗣𝗢
-                </h4>
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
-    </div>
-
-    <!--VIDEOS INSTITUCIONALES Y ENLACES DE ESTADO (SECCION)-->
-
+     </div>
+ 
+    
     <article>
         <h2 class="azul">VIDEOS</h2>
         <h3 class="naranja">institucionales</h3>
@@ -383,6 +390,7 @@
         <h2 class="azul">ENLACES</h2>
         <h3 class="naranja">del estado</h3>
         <hr class="line">
+        
         <div class="container-fluid">
             <div class="owl-carousel" id="inst-02" style="padding-top: 3rem;">
                 <a class="links-ext" href="https://www.gob.pe/" target="_blank">
@@ -422,35 +430,41 @@
         });
         </script>    
 
-        <footer>
-            <div>
-                <img src="./imagenes/orditi_logo.png" alt="ORDITI" width="250px">
-                <ul>
-                    <li>Gobierno Regional Junín Copyright © 2024</li>
-                    <li>_________________</li>
-                    <br>
-                    <li>Soporte técnico: orditi@regionjunin.gob.pe</li>
-                    <li>_________________</li>
-                    <br>
-                    <li>Oficina Regional de Desarrollo Institucional <br> y Tecnología de la Información</li>
-                </ul>
-            </div>
-            <div class="content-contact" style="position: relative;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6105185225842!2d-75.21140852405026!3d-12.070296992341179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964e39339e27%3A0x53e3ec8dd75d535d!2sGobierno%20Regional%20de%20Junin%2C%20Huancayo%2012001!5e0!3m2!1ses-419!2spe!4v1738010697582!5m2!1ses-419!2spe" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="info-float p-4" style="color:#fff; width:250px; height:81.8%; background-color: #12b460d2; position: absolute; top:0; left: 5.5%; z-index:999">
-                    <p><b>Dirección Sede Principal:</b> Jr. Loreto N° 363, Huancayo</p>
-                    <p><b>Dirección Sede Huancavelica:</b> Av. Huancavelica y Lima N° ... , Huancayo</p>
-                    <p><b>Oficina de Enlace en Lima:</b> Jirón Gregorio Paredes N° 316 <br>
-                        Lima Cercado - Teléfono: (01)3723753</p>
-                </div>
-            </div>
-            <div class="atencion">
-                <p><b>Horario de Atención:</b></p>
-                <p>Lunes a Viernes de 08:00 a 13:00 horas <br> y de 14:30 a 17:30 horas.</p>
-            </div>
-        </footer>
     </article>
+
+    
+    <article>
+        <h2 class="ubicanos">ENCUENTRANOS</h2>
+        <h3 class="en">en..</h3>
+        <hr>
+    </article>
+
+    <div class="content-contact" style="position: relative;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6105185225842!2d-75.21140852405026!3d-12.070296992341179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964e39339e27%3A0x53e3ec8dd75d535d!2sGobierno%20Regional%20de%20Junin%2C%20Huancayo%2012001!5e0!3m2!1ses-419!2spe!4v1738010697582!5m2!1ses-419!2spe" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="info-float" >
+            <p><b>Dirección Sede Principal:</b> Jr. Loreto N° 363, Huancayo</p>
+            <p><b>Dirección Sede Huancavelica:</b> Av. Huancavelica y Lima N° ... , Huancayo</p>
+            <p><b>Oficina de Enlace en Lima:</b> Jirón Gregorio Paredes N° 316 <br>
+                Lima Cercado - Teléfono: (01)3723753</p>
+            <p>Horario de Atención: Lunes a Viernes de 08:00 a 13:00 horas <br> y de 14:30 a 17:30 horas.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-b">
+            <img src="img_NOTICIAS/ORDITI-logo.png" alt="ORDITI" class="footer-img">
+            <ul>
+                <li>Gobierno Regional Junín Copyright © 2025</li>
+                <br>
+                <li>Soporte técnico: orditi@regionjunin.gob.pe</li>
+                <br>
+                <li>Oficina Regional de Desarrollo Institucional <br> y Tecnología de la Información</li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="app.js"></script> <!--llama a js-->
-    <script src="app.js"></script> <!--llama a js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
