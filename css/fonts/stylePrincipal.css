@@ -17,175 +17,108 @@
     src: url("fonts/Loew-Bold.otf");
   }
 
-  @font-face {
+@font-face {
     font-family: "Eloque-Bold";
     src: url("fonts/Eloque-Bold.ttf");
 }
 
-  body {
-      font-family: Arvo;
-      margin: 0;
-      padding: 0;
-      background-color: #F2F7FC;
-      color: #000000;
-      overflow-x: hidden; /*se fue el scroll*/
-      min-height: 100vh;
-      box-sizing: border-box;
-  }
-  
-  
-  svg {
-      width: 25px;
-  }
-  
-  header {
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%; 
-      max-width: 100%;
-      margin: auto;
-      display: flex;
-      grid-template-columns: 50px 1fr 70px;
-      grid-template-rows: 80px;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed; 
-      z-index: 1000; 
-      background-color: #1255b34e; /* Fondo semi-transparente para mejor visibilidad */
-      padding: 0px 10%; 
-  }
-  /*avance 2*/
-  .navigation ul {
-      list-style: none;
-  }
-  
-  .header .navigation ul li {
-      float: left;
-      position: relative;
-  }
-  
-  .header .navigation ul li a {
-      font-size: 13px;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 20px;
-      display: block;
-      transition: all .2s ease;
-  }
-  
-  .header .navigation ul li a:hover {
-      background-color: #12b361;
-  }
-  
-  .header .navigation ul li ul {
-      position: absolute;
-      right: 0;
-      width: 300px;
-      background-color: rgba(1, 1, 1, 0.7);
-      display: none;
-  }
-  .header .navigation ul li ul li a {
-      font-size: 15px;
-      text-transform: capitalize;
-  }
-  .header .navigation ul li ul li ul {
-      position: absolute;
-      top: 0;
-      right: 300px;
-  }
-  
-  .header .navigation ul li ul li {
-      width: 100%;
-  }
-  
-  .header .navigation ul li:hover > ul {
-      display: initial;
-  }
-  
-  #toggle,
-  .header label{
-      display: none;
-      cursor: pointer;
-  }
-  
-  .menu1 {
-      width: 45px;
-      height: 35px;
-  }
-  
-  @media(max-width:950px) {
-      .header label {
-          display: initial;
-      }
-      .header {
-          padding: 20px 10%;
-      }
-  
-      .header .navigation {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background-color: rgba(1, 1, 1, 0.7);
-          display: none;
-      }
-  
-      .header .navigation ul li {
-          width: 100%;
-      }
-  
-      .header .navigation ul li a {
-          padding: 8px 30 px 8 px 10%;
-      }
-  
-      .header .navigation ul li ul {
-          position: relative;
-          width: 100%;
-          left: 0;
-      }
-      .header .navigation ul li ul li {
-  
-          background-color: rgba(1, 1, 1, 0.7);
-      }
-      .header .navigation ul li ul li ul {
-          position: relative;
-          width: 100%;
-          left: 0;
-      }
-  }
-  
-  #toggle:checked ~ .navigation {
-      display: block;
-  }
-  header .brilogo img {
-      height: 80px;
-      z-index: 1000;
-  }
-  
-  header .brilogo2 img {
-      z-index: 1000;
-      height: 80px;
-      vertical-align: middle;
-      margin-right: 100px;
-  }
-  
-  header .britransmission {
-      display: flex;
-      align-items: center;
-  }
-  
-  header .britransmission svg {
-      width: 45px;
-      height: 100px;
-      fill: #d03333;
-  }
-  /*header cambio d e color*/
-  .header.solid {
-      background-color: #1355B3; /* Cambia este color al que prefieras */
-      transition: background-color 0.6s ease; /* Agrega una transición suave */
-  }
-  
+body {
+    font-family: Arvo;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F7FC;
+    color: #000000;
+    overflow-x: hidden; /*se fue el scroll*/
+}
+
+
+svg {
+    width: 25px;
+}
+
+header {
+    width: 100%; 
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 70px;
+    grid-template-rows: 80px;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    z-index: 1000; 
+    background-color: #1255b34e; /* Fondo semi-transparente para mejor visibilidad */
+    padding: 0 20px; 
+}
+
+header .brilogo img {
+    height: 80px;
+    z-index: 20;
+}
+
+header .brilogo2 img {
+    z-index: 1;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 100px;
+}
+
+
+header .menu {
+    padding: 10;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+}
+header .menu a {
+    text-decoration: none; 
+    color: #eee; 
+    border: none; 
+    outline: none; 
+    text-shadow: none;
+    padding-right: 45px;
+}
+/*avance pt 2*/
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: #444; /* Color de fondo del submenú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px; /* Ancho mínimo del submenú */
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+}
+.submenu li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.menu li.has-submenu:hover .submenu {
+    display: block;
+}
+/*fin de avance */    
+header .britransmission {
+    display: flex;
+    align-items: center;
+}
+
+header .britransmission svg {
+    width: 45px;
+    height: 100px;
+    fill: #d03333;
+}
+/*header cambio d e color*/
+.header.solid {
+    background-color: #1355B3; /* Cambia este color al que prefieras */
+    transition: background-color 0.6s ease; /* Agrega una transición suave */
+}
 /*slider css*/
 .brislider {
     height: 80vh; /*ajeste del fondo y items cambio*/
@@ -481,7 +414,6 @@
     transform: translateY(-15px);
 }
 
-
 .ultima-noticia{
     color: #7c89b5;
     align-self: flex-start;
@@ -530,7 +462,9 @@
     transition: transform 0.3s ease-in-out;
 }
 
-
+.card h2{
+    font-family: "Eloque-Bold";
+}
 
 .card01-tiempo{
     position: absolute;
@@ -543,8 +477,6 @@
     border-radius: 15px;
     font-weight: bold;
 }
-
-
 
 .card:hover{
     transform: translateY(-15px);
@@ -817,6 +749,8 @@
     background-color: #12b460d2;
 }
 
+
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -918,7 +852,7 @@
 .info-float{
     color:#fff; 
     width:250px; 
-    height:100%; 
+    height:92.5%; 
     background-color: #12b460d2; 
     position: absolute; 
     top:0; 
