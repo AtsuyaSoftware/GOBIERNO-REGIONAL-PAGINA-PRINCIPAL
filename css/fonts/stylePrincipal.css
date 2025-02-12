@@ -17,183 +17,20 @@
     src: url("fonts/Loew-Bold.otf");
   }
 
-  @font-face {
+@font-face {
     font-family: "Eloque-Bold";
     src: url("fonts/Eloque-Bold.ttf");
 }
 
-  body {
-      font-family: Arvo;
-      margin: 0;
-      padding: 0;
-      background-color: #F2F7FC;
-      color: #000000;
-      overflow-x: hidden; /*se fue el scroll*/
-      min-height: 100vh;
-      box-sizing: border-box;
-  }
-  
-  
-  svg {
-      width: 25px;
-  }
-  
-  header {
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%; 
-      max-width: 100%;
-      margin: auto;
-      display: flex;
-      grid-template-columns: 50px 1fr 70px;
-      grid-template-rows: 80px;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed; 
-      z-index: 1000; 
-      background-color: #1255b34e; /* Fondo semi-transparente para mejor visibilidad */
-      padding: 0px 10%; 
-  }
-  /*avance 2*/
-  .navigation ul {
-      list-style: none;
-  }
-  
-  .header .navigation ul li {
-      float: left;
-      position: relative;
-  }
-  
-  .header .navigation ul li a {
-      font-size: 13px;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 20px;
-      display: block;
-      transition: all .2s ease;
-  }
-  
-  .header .navigation ul li a:hover {
-      background-color: #12b361;
-  }
-  
-  .header .navigation ul li ul {
-      position: absolute;
-      right: 0;
-      width: 300px;
-      background-color: rgba(1, 1, 1, 0.7);
-      display: none;
-  }
-  .header .navigation ul li ul li a {
-      font-size: 15px;
-      text-transform: capitalize;
-  }
-  .header .navigation ul li ul li ul {
-      position: absolute;
-      top: 0;
-      right: 300px;
-  }
-  
-  .header .navigation ul li ul li {
-      width: 100%;
-  }
-  
-  .header .navigation ul li:hover > ul {
-      display: initial;
-  }
-  
-  #toggle,
-  .header label{
-      display: none;
-      cursor: pointer;
-  }
-  
-  .menu1 {
-      width: 45px;
-      height: 35px;
-  }
-  
-  @media(max-width:950px) {
-      .header label {
-          display: initial;
-      }
-      .header {
-          padding: 20px 10%;
-      }
-  
-      .header .navigation {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background-color: rgba(1, 1, 1, 0.7);
-          display: none;
-      }
-  
-      .header .navigation ul li {
-          width: 100%;
-      }
-  
-      .header .navigation ul li a {
-          padding: 8px 30 px 8 px 10%;
-      }
-  
-      .header .navigation ul li ul {
-          position: relative;
-          width: 100%;
-          left: 0;
-      }
-      .header .navigation ul li ul li {
-  
-          background-color: rgba(1, 1, 1, 0.7);
-      }
-      .header .navigation ul li ul li ul {
-          position: relative;
-          width: 100%;
-          left: 0;
-      }
-  }
-  
-  #toggle:checked ~ .navigation {
-      display: block;
-  }
-  header .brilogo img {
-      height: 80px;
-      z-index: 1000;
-  }
-  
-  header .brilogo2 img {
-      z-index: 1000;
-      height: 80px;
-      vertical-align: middle;
-      margin-right: 100px;
-  }
-  
-  header .britransmission {
-      display: flex;
-      align-items: center;
-  }
-  
-  header .britransmission svg {
-      width: 45px;
-      height: 100px;
-      fill: #d03333;
-  }
-  /*header cambio d e color*/
-  .header.solid {
-      background-color: #1355B3; /* Cambia este color al que prefieras */
-      transition: background-color 0.6s ease; /* Agrega una transición suave */
-  }
-  
-<<<<<<< HEAD
 body {
     font-family: Arvo;
     margin: 0;
     padding: 0;
     background-color: #F2F7FC;
     color: #000000;
+    overflow-x: hidden; /*se fue el scroll*/
 }
+
 
 svg {
     width: 25px;
@@ -226,6 +63,7 @@ header .brilogo2 img {
     margin-right: 100px;
 }
 
+
 header .menu {
     padding: 10;
     margin: 0;
@@ -243,6 +81,29 @@ header .menu a {
     text-shadow: none;
     padding-right: 45px;
 }
+/*avance pt 2*/
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: #444; /* Color de fondo del submenú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px; /* Ancho mínimo del submenú */
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+}
+.submenu li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.menu li.has-submenu:hover .submenu {
+    display: block;
+}
+/*fin de avance */    
 header .britransmission {
     display: flex;
     align-items: center;
@@ -253,9 +114,11 @@ header .britransmission svg {
     height: 100px;
     fill: #d03333;
 }
-
-=======
->>>>>>> BritneySheyla
+/*header cambio d e color*/
+.header.solid {
+    background-color: #1355B3; /* Cambia este color al que prefieras */
+    transition: background-color 0.6s ease; /* Agrega una transición suave */
+}
 /*slider css*/
 .brislider {
     height: 80vh; /*ajeste del fondo y items cambio*/
@@ -437,12 +300,9 @@ header .britransmission svg {
 /*----------ccards------------*/
 .bricontainer {
     display: flex;
-<<<<<<< HEAD
-=======
     align-items: center;
     justify-content: center;
     padding: 0 140px;
->>>>>>> BritneySheyla
 }
 
 .bricard {
@@ -502,8 +362,6 @@ header .britransmission svg {
     margin-top: -0.1rem;
 }
 
-<<<<<<< HEAD
-=======
 .hr-noticias{
     border-color: #718cec;
     justify-content: baseline;
@@ -513,46 +371,14 @@ header .britransmission svg {
     margin-left: 32rem;
 }
 
->>>>>>> BritneySheyla
 /* NOTICIA PRINCIPAL */
 
 .noticia-principal{
     display: flex;
     align-content: center;
     justify-content: center;
-<<<<<<< HEAD
-    width: 100%;
-=======
->>>>>>> BritneySheyla
     gap: 20px;
     margin-bottom: 20px;
-    background: red;
-}
-
-.img-noticia-principal{
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin-left: 190px;
-    margin-right: 30px;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.img-noticia-principal:hover{
-    transform: translateY(-15px);
-}
-
-.contenido-noticia{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    margin-right: 150px;
-    background: blue;
 }
 
 .img-noticia-principal{
@@ -588,7 +414,6 @@ header .britransmission svg {
     transform: translateY(-15px);
 }
 
-
 .ultima-noticia{
     color: #7c89b5;
     align-self: flex-start;
@@ -600,12 +425,8 @@ header .britransmission svg {
 }
 
 .contenido-noticia-principal{
-<<<<<<< HEAD
-    font-family: Arvo;
-=======
     font-family: Arial, Helvetica, sans-serif;
     color: #747474;
->>>>>>> BritneySheyla
 }
 
 .cards-container{
@@ -641,9 +462,9 @@ header .britransmission svg {
     transition: transform 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
-=======
-
+.card h2{
+    font-family: "Eloque-Bold";
+}
 
 .card01-tiempo{
     position: absolute;
@@ -657,9 +478,6 @@ header .britransmission svg {
     font-weight: bold;
 }
 
-
-
->>>>>>> BritneySheyla
 .card:hover{
     transform: translateY(-15px);
 }
@@ -678,8 +496,6 @@ header .britransmission svg {
     padding: 10px;
     display: none;
 }
-<<<<<<< HEAD
-=======
 
 .noticias-list {
     display: flex;
@@ -703,7 +519,6 @@ header .britransmission svg {
     justify-content: center;
 }
 
->>>>>>> BritneySheyla
 .noticias-footer{
     display: flex;
     justify-content: center;
@@ -745,8 +560,6 @@ header .britransmission svg {
     margin-top: -0.1rem;
 }
 
-<<<<<<< HEAD
-=======
 .hr-transmisiones{
     border-color: #718cec;
     justify-content: baseline;
@@ -756,7 +569,6 @@ header .britransmission svg {
     margin-left: 26rem;
 }
 
->>>>>>> BritneySheyla
 .main-video {
     display: flex;
     align-items: center;
@@ -766,51 +578,6 @@ header .britransmission svg {
 }
 
 .main-video iframe {
-<<<<<<< HEAD
-    width: 1100px;
-    height: 615px;
-    border-radius: 15px;
-    background: #333;
-}
-
-
-
-.card-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    padding: 40px;
-    margin: 0 auto;
-}
-
-.card-wrapper{
-    position: relative;
-    margin: 40px auto;
-    overflow: hidden;
-    width: 100%;
-}
-
-.card-item{
-    width: 100%; /* Cada item ocupa el 100% del espacio disponible dentro del swiper */
-    max-width: 400px; /* Limita el ancho máximo de cada item */
-    height: auto; /* Para que la altura sea proporcional al contenido */
-    box-sizing: border-box; 
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.card-item iframe{
-    width: 100%; /* El iframe ocupará todo el ancho disponible */
-    height: 200px; /* Ajusta la altura del iframe */
-    border-radius: 15px;
-}
-
-.card-item h4{
-    padding: 20px;
-}
-
-=======
     width: 900px;
     height: 450px;
     border-radius: 15px;
@@ -860,7 +627,6 @@ header .britransmission svg {
     padding: 20px;
 }
 
->>>>>>> BritneySheyla
 .swiper-pagination {
     position: relative;
     margin-top: 20px;
@@ -870,8 +636,6 @@ header .britransmission svg {
 .swiper-button-prev, .swiper-button-next {
     z-index: 10; /* Asegura que las flechas sean visibles encima del swiper */
 }
-<<<<<<< HEAD
-=======
 
 .btn-transmisiones{
     display: flex;
@@ -894,7 +658,6 @@ header .britransmission svg {
 }
 
 
->>>>>>> BritneySheyla
 /* ======================================================================= */
 /* VIDEOS INSTITUCIONALES (CSS)  */
 
@@ -929,27 +692,14 @@ header .britransmission svg {
     text-align: center;
 }
 
-<<<<<<< HEAD
-.line{
-    border-color: #0F40F5;
-    justify-content: baseline;
-    max-width: 80%;
-    margin-top: -4rem;
-    margin-bottom: 5rem;
-}
-=======
->>>>>>> BritneySheyla
 
 .videos{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-<<<<<<< HEAD
-=======
     max-width: 1200px; /* Ajusta según el tamaño deseado */
     margin: auto;
->>>>>>> BritneySheyla
 }
 
 .video_institucional{
@@ -979,19 +729,10 @@ header .britransmission svg {
     height: 190px;
 }
 
-<<<<<<< HEAD
-.ver-mas{
-    background-color: #1355B3;  
-    padding: 10px;
-    border: none;
-    margin-bottom: 1rem;
-    margin: 0px 6rem;
-=======
 .btn-ver-mas{
     display: flex;
     justify-content: center;
     align-content: center;
->>>>>>> BritneySheyla
 }
 
 .btn-ver-mas a{
@@ -1007,6 +748,8 @@ header .britransmission svg {
     color: aliceblue;
     background-color: #12b460d2;
 }
+
+
 
 .dropdown-menu {
     display: none;
@@ -1051,9 +794,6 @@ header .britransmission svg {
     margin-bottom: 80px;
 }
 
-<<<<<<< HEAD
-
-=======
 .hr-enlaces{
     border-color: #718cec;
     justify-content: baseline;
@@ -1062,17 +802,12 @@ header .britransmission svg {
     margin-bottom: 5rem;
     margin-left: 19rem;
 }
->>>>>>> BritneySheyla
 
 /* ======================================================================= */
 /* ENCUENTRANOS EN (CSS)  */
 
 
-<<<<<<< HEAD
-.ubicanos{
-=======
 .encuentranos{
->>>>>>> BritneySheyla
     color: #0F40F5;
     margin-bottom: -0.7rem;
     margin-left: 5rem;
@@ -1082,18 +817,12 @@ header .britransmission svg {
 
 .en{
     color: #FF6801;
-<<<<<<< HEAD
-    margin-left: 10rem;
-=======
     margin-left: 22rem;
->>>>>>> BritneySheyla
     font-family: 'Loew ExtraBold';
     font-size: 30px;
     margin-top: -0.1rem;
 }
 
-<<<<<<< HEAD
-=======
 .hr-encuentranos{
     border-color: #718cec;
     justify-content: baseline;
@@ -1104,7 +833,6 @@ header .britransmission svg {
 }
 
 
->>>>>>> BritneySheyla
 .content-contact{
     display: flex;
     align-items: center;
@@ -1124,11 +852,7 @@ header .britransmission svg {
 .info-float{
     color:#fff; 
     width:250px; 
-<<<<<<< HEAD
     height:92.5%; 
-=======
-    height:100%; 
->>>>>>> BritneySheyla
     background-color: #12b460d2; 
     position: absolute; 
     top:0; 
@@ -1188,8 +912,4 @@ footer div{
 .atencion{
     padding: 55px 55px;
     text-align: center;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> BritneySheyla
